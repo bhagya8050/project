@@ -1,0 +1,40 @@
+<html>
+<head> 
+<title>Form validation</title>
+</head>
+<body>
+<script>
+function data()
+{
+ var a=document.getElementById("n1").value;
+ var b=document.getElementById("n2").value;
+ var c=document.getElementById("n3").value;
+ var d=document.getElementById("n4").value;  
+ 
+if(a==""||b==""||c==""||d=="")
+ {
+  alert("all fields are mendator');
+return false;
+}
+ else if(b.length<10||b.lenght>10)
+ {
+  alert("Number should be of 10 digits ! please enter valid number");
+return false;
+} else if(isNaN(b))
+ {
+  alert("Only numbers are allowed ! please enter valid number");
+return false;
+else
+{
+true;
+ }
+}
+</script>
+
+<from onsubmit="return data()" action="abc.html">
+Userid: <input type="tsxt" id="n1">
+Contact: <input type="text" id="n2">
+password: <input type="password"id="n3">
+Confirm password: <input type="password" id="n4">
+<input type="submit" value="submit your data">
+</form>
